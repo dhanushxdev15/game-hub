@@ -14,6 +14,7 @@ import { CanceledError } from "axios";
   title: string;
   thumbnail: string;
   platform:string;
+  metacritic:number;
 }
 
 const useGames = () => {
