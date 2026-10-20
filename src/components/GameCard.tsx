@@ -12,7 +12,7 @@ import GameRating from './GameRating'
 const GameCard = ({game}:Props) => {
   return (
     <Card borderRadius={10} overflow="hidden">
-       <Image src={game.thumbnail}/>
+       <Image src={game.thumbnail}height="200px"width="100%"objectFit="cover"/>
        <CardBody>
            <Heading fontSize="2xl">{game.title}</Heading>
            <HStack justifyContent="space-between">
