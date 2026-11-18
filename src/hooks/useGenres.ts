@@ -4,6 +4,7 @@ import useData from "./useDats";
 export interface Genre{
     id:number;
     name:string;
+    image_background ?:string;
 }
 
 interface GameGenre {

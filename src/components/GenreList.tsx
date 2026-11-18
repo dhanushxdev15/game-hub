@@ -1,12 +1,19 @@
-import useGenres from "../hooks/useGanres";
-
+import useGenres from "../hooks/useGenres";
+import { List, ListItem, HStack, Image, Text } from "@chakra-ui/react";
 const GenreList = () => {
    const {genres}=  useGenres();
   return (
-   <ul>
-    {genres.map(genre => <li key={genre.id}>{genre.name}</li>)}
-   </ul>
+   <List>
+    {genres.map((genre) => (  
+    <ListItem key={genre.id}>
+      <HStack>
+     <Image boxSize="32px" borderRadius={8} />
+      <Text>{genre.name}</Text>
+      </HStack>
+      </ListItem>
+      ))}
+   </List>
   )
-}
+};
 
-export default GenreList
+export default GenreList;
