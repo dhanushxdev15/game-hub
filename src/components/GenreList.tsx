@@ -1,7 +1,11 @@
 import useGenres from "../hooks/useGenres";
 import { List, ListItem, HStack, Image, Text } from "@chakra-ui/react";
+import { Spinner } from "@chakra-ui/react";
 const GenreList = () => {
-   const {genres}=  useGenres();
+   const {genres,isLoading,error
+   }=  useGenres();
+   if (isLoading) return <Spinner/>;
+   if (error) return null;
   return (
    <List>
     {genres.map((genre) => (  
