@@ -14,6 +14,7 @@ import useData from "./useDats";
   thumbnail: string;
   platform:string;
   metacritic:number;
+  genre: string;
 }
 
 const useGames = () => useData<Game>("/games");
